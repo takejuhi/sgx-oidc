@@ -9,7 +9,7 @@ NAME_T = libenclave.a
 SRC_U = ../app/
 SRC_T = ./
 OBJ_T = ../obj/
-SGX_SDK ?= /opt/sgxsdk
+SGX_SDK ?= /opt/intel/sgxsdk
 FLAGS = -Wall -Wextra
 GCC_STEP1_T = -fstack-protector -I$(CUSTOM_COMMON_PATH)/inc -I$(CUSTOM_EDL_PATH) -I$(SGX_SDK)/include \
 	-I$(SGX_SDK)/include/tlibc -I$(SGX_SDK)/include/stlport -I$(SGX_SDK)/include/epid -I $(SRC_T) \
