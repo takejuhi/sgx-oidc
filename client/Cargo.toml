@@ -1,8 +1,18 @@
 [package]
 name = "client"
 version = "0.1.0"
-edition = "2021"
+edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+anyhow = { version = "*" }
+env_logger = "0.10.1"
+log = "0.4.20"
+openidconnect = { version = "*" }
+p256 = "0.13.2"
+random = "0.14.0"
+reqwest = { version = "0.11.23", features = ["json"] }
+serde_json = "1.0.111"
+tokio = { version = "1.35.1", features = ["rt", "macros"] }
+url = "2.5.0"

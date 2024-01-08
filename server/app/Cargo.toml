@@ -3,9 +3,15 @@ name = "app"
 version = "1.0.0"
 authors = ["Teaclave"]
 build = "build.rs"
+edition = "2018"
 
 [dependencies] # You can specify the features you need for urts, such as global_exit and global_init
-sgx_types = { git = "https://github.com/apache/teaclave-sgx-sdk.git" }
-sgx_urts = { git = "https://github.com/apache/teaclave-sgx-sdk.git"}
+sgx_types = { git = "https://github.com/apache/teaclave-sgx-sdk.git", tag = "v1.1.6" }
+sgx_urts = { git = "https://github.com/apache/teaclave-sgx-sdk.git", tag = "v1.1.6" }
+tokio = { version = "*", features = ["net", "macros", "rt-multi-thread"] }
+anyhow = { version = "*" }
+lazy_static = { version = "1.1.0", features = ["spin_no_std"] }
+log = "0.4.20"
+env_logger = "0.10.1"
 
 [patch.'https://github.com/apache/teaclave-sgx-sdk.git']
